@@ -1,17 +1,17 @@
-doctype html(lang='en')
+include mixins
 
+doctype html(lang='en')
 head
-    title Your prismic.io project
-    link(rel="stylesheet", href="/stylesheets/style.css")
-    // Required for Previews and Experiments
-    script(src="//static.cdn.prismic.io/prismic.min.js")
+  title Your prismic.io project
+  link(rel="stylesheet", href="/style.css")
+  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+  // Required for Previews and Experiments
+  script(src="//static.cdn.prismic.io/prismic.min.js")
 
 body
-
-    header
-        a(href="/")
-            h1 Your prismic.io project
-
+  +nav("Carol Kahn", "main-nav", "fixed-top")
+    +nav_item( "/", "active" ) Home
+    +nav_item( "/" ) About
+    +nav_item( "/" ) Contact
+  .container
     block body
-
-
