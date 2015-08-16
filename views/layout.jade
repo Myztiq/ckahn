@@ -11,7 +11,11 @@ head
 body
   +nav("Carol Kahn", "main-nav")
     +nav_item( "/", "active" ) Home
-    each page, index in pages
-        +nav_item( '#'+index )=page.getText('page.title')
+    +nav_item( '#groups' )=pages.groups.getText('page.title')
+    +nav_item( '#groups/women' )=pages['groups/women'].getText('page.title')
+    +nav_item( '#groups/co-gender' )=pages['groups/co-gender'].getText('page.title')
+    +nav_item( '#individual' )=pages.individual.getText('page.title')
+    +nav_item( '#about' )=pages.about.getText('page.title')
+
 
   block body

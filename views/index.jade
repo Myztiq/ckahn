@@ -41,25 +41,28 @@ block body
           |,&nbsp;
           em=testimonial.getText('testimonial.credentials')
 
-  section(id='groups/women')
+
+  section(id='groups')
+    .container
+      h2=pages.groups.getText('page.title')
+      !=pages.groups.getHtml('page.content')
+
+  section.alternate(id='groups/women')
     .container
       h2=pages['groups/women'].getText('page.title')
       !=pages['groups/women'].getHtml('page.content')
 
-  section.alternate(id='groups/co-gender')
+  section(id='groups/co-gender')
     .container
       h2=pages['groups/co-gender'].getText('page.title')
       !=pages['groups/co-gender'].getHtml('page.content')
 
-  section(id='individual')
+  section.alternate(id='individual')
     .container
       h2=pages.individual.getText('page.title')
       !=pages.individual.getHtml('page.content')
 
-  section.alternate(id='groups')
-    .container
-      h2=pages.groups.getText('page.title')
-      !=pages.groups.getHtml('page.content')
+
 
   section(id='about')
     .container
