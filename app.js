@@ -28,8 +28,7 @@ app.use(session({secret: '1234', saveUninitialized: true, resave: true}));
 
 app.use(sassMiddleware({
   src: path.join(__dirname, 'styles'),
-  dest: path.join(__dirname, 'public'),
-  debug: true
+  dest: path.join(__dirname, 'public')
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
