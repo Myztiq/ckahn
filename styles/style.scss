@@ -1,9 +1,9 @@
 //@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
-@import "../node_modules/bootswatch/paper/variables";
+@import "../node_modules/bootswatch/custom/variables";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "../node_modules/bootswatch/sandstone/bootswatch";
+@import "../node_modules/bootswatch/custom/bootswatch";
 
-//body { padding-top: 65px; }
+//body { padding-top: 63px; }
 nav.navbar{
   margin-bottom: 0px;
 }
@@ -20,6 +20,12 @@ section {
   &.alternate{
     background-color: #F4F5F3;
   }
+
+  &.footer {
+    background-color: $brand-success;
+    color: #ffffff;
+  }
+
   .background-image{
     background-size: cover;
     background-position: center;
@@ -60,12 +66,17 @@ section {
   position: relative;
 }
 .caption{
-  position: absolute;
-  bottom: -24px;
-  right: 0px;
-  background-color: white;
-  color: black;
-  padding: 8px;
+  background-color: $brand-success;
+  color: #ffffff;
+  padding: 100px 0 20px;
+  margin: 0 0 -25px 0;
+  background: -moz-linear-gradient(top, rgba(135,174,117,0) 0%, rgba(135,174,117,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(135,174,117,0)), color-stop(100%,rgba(135,174,117,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(135,174,117,0) 0%,rgba(135,174,117,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(135,174,117,0) 0%,rgba(135,174,117,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(135,174,117,0) 0%,rgba(135,174,117,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(135,174,117,0) 0%,rgba(135,174,117,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0087ae75', endColorstr='#87ae75',GradientType=0 );
 }
 
 .custom-popover {

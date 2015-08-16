@@ -8,15 +8,11 @@ block body
     .container.hero
       h1= homepage.getText('homepage.catchPhrase')
 
-      .caption!= homepage.getHtml('homepage.leadImageCaption')
+    .caption
+      .container!= homepage.getHtml('homepage.leadImageCaption')
 
   section
     .container
-      .btn.btn-default yes
-      .btn.btn-primary yes
-      .btn.btn-warning yes
-      .btn.btn-danger yes
-      .btn.btn-info yes
       h2= homepage.getText('homepage.secondaryCatchPhrase')
 
       .row.homepage-lists
@@ -47,10 +43,39 @@ block body
 
 
 
-  each page, index in pages
-    section
-      .container
-        pre Page ID: #{index}
-        h2=page.getText('page.title')
-        !=page.getHtml('page.content')
+  //- each page, index in pages
+  //-   section
+  //-     .container
+  //-       pre Page ID: #{index}
+  //-       h2(id='#{index}')=page.getText('page.title')
+  //-       !=page.getHtml('page.content')
+
+  section(id='groups/women')
+    .container
+      h2=pages['groups/women'].getText('page.title')
+      !=pages['groups/women'].getHtml('page.content')
+
+  section.alternate(id='groups/co-gender')
+    .container
+      h2=pages['groups/co-gender'].getText('page.title')
+      !=pages['groups/co-gender'].getHtml('page.content')
+
+  section(id='individual')
+    .container
+      h2=pages.individual.getText('page.title')
+      !=pages.individual.getHtml('page.content')
+
+  section.alternate(id='groups')
+    .container
+      h2=pages.groups.getText('page.title')
+      !=pages.groups.getHtml('page.content')
+
+  section(id='about')
+    .container
+      h2=pages.about.getText('page.title')
+      !=pages.about.getHtml('page.content')
+
+  section.footer
+    .container
+      p &#169; Carol Kahn 2015
 

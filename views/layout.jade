@@ -11,7 +11,7 @@ head
 body
   +nav("Carol Kahn", "main-nav")
     +nav_item( "/", "active" ) Home
-    each page in pages
-      +nav_item( "/" )=page.getText('page.title')
+    each page, index in pages
+        +nav_item( '#'+index )=page.getText('page.title')
 
   block body
