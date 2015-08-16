@@ -26,10 +26,11 @@ block body
             .intro You can:
               ul
                 each val in benefits
-                  li
+                  li.custom-popover
                     =val.title.value[0].text
-                    each detail in val.details.value
-                      ul
+                    // So these should not be displayed all the time, should only show on hover as a tooltip type thing.
+                    ul.popover-content
+                      each detail in val.details.value
                         li=detail.text
 
   section.alternate

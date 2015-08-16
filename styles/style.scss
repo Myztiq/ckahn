@@ -58,3 +58,25 @@ section {
   color: black;
   padding: 8px;
 }
+
+.custom-popover {
+  position: relative;
+  .popover-content{
+    display: none;
+  }
+  &:hover{
+    .popover-content{
+      margin: 0px;
+      padding: 10px 10px 10px 30px;
+      pointer-events: none;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: -20px;
+      border: 1px solid black;
+      background-color: white;
+      z-index: 2;
+      transform: translateX(-100%) translateY(-50%);
+    }
+  }
+}
