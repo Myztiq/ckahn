@@ -61,22 +61,54 @@ section {
 
 .custom-popover {
   position: relative;
+  text-decoration: underline;
+  cursor: pointer;
   .popover-content{
-    display: none;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .3s ease-in-out;
+    margin: 0px;
+    padding: 10px 10px 10px 30px;
+    pointer-events: none;
+    top: 50%;
+    left: -30px;
+    border: 1px solid black;
+    background-color: white;
+    z-index: 2;
+    transform: translateX(-100%) translateY(-50%);
+    box-shadow: 0 0 2px black;
+    border-radius: 5px;
+
+    &:after, &:before {
+      left: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    &:after {
+      border-color: rgba(213, 213, 213, 0);
+      border-left-color: white;
+      border-width: 10px;
+      margin-top: -10px;
+    }
+    &:before {
+      border-color: rgba(0, 0, 0, 0);
+      border-left-color: black;
+      border-width: 12px;
+      margin-top: -12px;
+    }
+
+
+
   }
   &:hover{
     .popover-content{
-      margin: 0px;
-      padding: 10px 10px 10px 30px;
-      pointer-events: none;
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: -20px;
-      border: 1px solid black;
-      background-color: white;
-      z-index: 2;
-      transform: translateX(-100%) translateY(-50%);
+      opacity: 1;
     }
   }
 }
