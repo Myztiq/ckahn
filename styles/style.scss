@@ -7,13 +7,17 @@ nav.navbar{
   margin-bottom: 0px;
 }
 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #3D2442;
+}
+
 section {
   padding-top: 24px;
   padding-bottom: 24px;
   position: relative;
 
   &.alternate{
-    background-color: #e9e9e9;
+    background-color: #F4F5F3;
   }
   .background-image{
     background-size: cover;
@@ -32,7 +36,7 @@ section {
       bottom: 0;
       right: 0;
       position: absolute;
-      background-color: rgba(255,255,255,.6);
+      /*background-color: rgba(255,255,255,.6);*/
     }
   }
 }
@@ -41,10 +45,14 @@ section {
   align-items: center;
   justify-content: center;
   h1{
-    padding: 24px 0px;
+    padding: 48px 0px;
     font-size: 60px;
-    text-align: center;
+    text-align: left;
     flex: 1;
+  }
+  h1 {
+    color: #ffffff;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, .5);
   }
 }
 .container{
@@ -72,12 +80,10 @@ section {
     pointer-events: none;
     top: 50%;
     left: -30px;
-    border: 1px solid black;
     background-color: white;
     z-index: 2;
     transform: translateX(-100%) translateY(-50%);
-    box-shadow: 0 0 2px black;
-    border-radius: 5px;
+    box-shadow: 0 10px 20px #efefef;
 
     &:after, &:before {
       left: 100%;
@@ -98,7 +104,7 @@ section {
     }
     &:before {
       border-color: rgba(0, 0, 0, 0);
-      border-left-color: black;
+      border-left-color: white;
       border-width: 12px;
       margin-top: -12px;
     }
