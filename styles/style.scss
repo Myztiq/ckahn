@@ -2,4 +2,59 @@
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../node_modules/bootswatch/paper/bootswatch";
 
-body { padding-top: 80px; }
+//body { padding-top: 65px; }
+nav.navbar{
+  margin-bottom: 0px;
+}
+
+section {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  position: relative;
+
+  &.alternate{
+    background-color: #b5b5b5;
+  }
+  .background-image{
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    &:before{
+      z-index: -1;
+      content: '';
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      background-color: rgba(255,255,255,.6);
+    }
+  }
+}
+.hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1{
+    padding: 24px 0px;
+    font-size: 60px;
+    text-align: center;
+    flex: 1;
+  }
+}
+.container{
+  position: relative;
+}
+.caption{
+  position: absolute;
+  bottom: -24px;
+  right: 0px;
+  background-color: white;
+  color: black;
+  padding: 8px;
+}
