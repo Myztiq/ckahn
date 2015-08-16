@@ -11,7 +11,7 @@ head
 body
   +nav("Carol Kahn", "main-nav", "fixed-top")
     +nav_item( "/", "active" ) Home
-    +nav_item( "/" ) About
-    +nav_item( "/" ) Contact
+    each page in pages
+      +nav_item( "/" )=page.getText('page.title')
   .container
     block body
