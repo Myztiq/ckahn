@@ -112,3 +112,14 @@ section {
     }
   }
 }
+
+.homepage-lists{
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  .well{
+    flex: 1;
+    margin: 12px;
+  }
+}

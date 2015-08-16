@@ -14,24 +14,22 @@ block body
     .container
       h2= homepage.getText('homepage.secondaryCatchPhrase')
 
-      .row
-        .col-sm-6
-          .well
-            .intro You will experience:
-              ul
-                each val in homepage.fragments['homepage.experienceList'].value
-                  li=val.text
-        .col-sm-6
-          .well
-            .intro You can:
-              ul
-                each val in benefits
-                  li.custom-popover
-                    =val.title.value[0].text
-                    // So these should not be displayed all the time, should only show on hover as a tooltip type thing.
-                    ul.popover-content
-                      each detail in val.details.value
-                        li=detail.text
+      .homepage-lists
+        .well
+          .intro You will experience:
+            ul
+              each val in homepage.fragments['homepage.experienceList'].value
+                li=val.text
+        .well
+          .intro You can:
+            ul
+              each val in benefits
+                li.custom-popover
+                  =val.title.value[0].text
+                  // So these should not be displayed all the time, should only show on hover as a tooltip type thing.
+                  ul.popover-content
+                    each detail in val.details.value
+                      li=detail.text
 
   section.alternate
     .container
