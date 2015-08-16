@@ -47,15 +47,13 @@ block body
       h2=pages.groups.getText('page.title')
       !=pages.groups.getHtml('page.content')
 
-  section.alternate(id='groups/women')
-    .container
-      h2=pages['groups/women'].getText('page.title')
-      !=pages['groups/women'].getHtml('page.content')
-
-  section(id='groups/co-gender')
-    .container
-      h2=pages['groups/co-gender'].getText('page.title')
-      !=pages['groups/co-gender'].getHtml('page.content')
+      .row
+        .col-xs-6(id='groups/co-gender')
+          h3=pages['groups/co-gender'].getText('page.title')
+          !=pages['groups/co-gender'].getHtml('page.content')
+        .col-xs-6(id='groups/women')
+          h3=pages['groups/women'].getText('page.title')
+          !=pages['groups/women'].getHtml('page.content')
 
   section.alternate(id='individual')
     .container
