@@ -43,10 +43,9 @@ block body
 
 
   each page, index in pages
-    section(
-      class=(index % 2===0) ? '' : 'alternate'
-    )
+    section
       .container
+        pre Page ID: #{index}
         h2=page.getText('page.title')
         !=page.getHtml('page.content')
 
