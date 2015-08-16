@@ -1,7 +1,35 @@
 extends ./layout.jade
 
 block body
-  div!= doc.getHtml('page.content')
+  h1= homepage.getText('homepage.catchPhrase')
 
+  != homepage.getHtml('homepage.leadImage')
+  != homepage.getHtml('homepage.leadImageCaption')
 
+  h3= homepage.getText('homepage.secondaryCatchPhrase')
+
+  .row
+    .col-sm-6
+      .well
+        .intro You will experience:
+          ul
+            each val in homepage.fragments['homepage.experienceList'].value
+              li=val.text
+    .col-sm-6
+      .well
+        .intro You can:
+          ul
+            each val in benefits
+              li
+                =val.title.value[0].text
+                each detail in val.details.value
+                  ul
+                    li=detail.text
+
+  blockquote
+    p=testimonial.getText('testimonial.quote')
+    footer
+      =testimonial.getText('testimonial.author')
+      |&nbsp;
+      em=testimonial.getText('testimonial.credentials')
 
