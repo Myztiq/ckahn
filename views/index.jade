@@ -90,6 +90,18 @@ block body
       h2=pages.about.getText('page.title')
       !=pages.about.getHtml('page.content')
 
+  section(id='testimonials')
+    .container
+      h2 Testimonials
+      for testimonial in testimonials
+        blockquote
+          p=testimonial.getText('testimonial.quote')
+          footer
+            =testimonial.getText('testimonial.author')
+            |,&nbsp;
+            em=testimonial.getText('testimonial.credentials')
+
+
   section.footer
     .container
       p &#169; Carol Kahn 2015
