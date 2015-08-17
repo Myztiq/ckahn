@@ -60,7 +60,30 @@ block body
       h2=pages.individual.getText('page.title')
       !=pages.individual.getHtml('page.content')
 
+  section(id='current-workshops')
+    .container
+      h2 Current Workshops
+      .workshops
+        each workshop in currentWorkshops
+          .workshop
+            .title
+              =workshop.getText('title')
+                small=workshop.getText('sub')
+            .content
+              !=workshop.getHtml('content')
 
+
+  section.alternate(id='past-workshops')
+    .container
+      h2 Past Workshops
+      .workshops
+        each workshop in pastWorkshops
+          .workshop
+            .title
+              =workshop.getText('title')
+              small=workshop.getText('sub')
+            .content
+              !=workshop.getHtml('content')
 
   section(id='about')
     .container
