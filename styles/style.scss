@@ -150,8 +150,8 @@ section {
 }
 .workshop{
   margin: 8px;
-  max-width: 275px;
-  background-color: #fafafa;
+  flex: 300px;
+  background-color: #F4F5F3;
   padding: 24px;
   .title{
     font-weight: bold;
@@ -164,10 +164,7 @@ section {
       color: gray;
     }
   }
-  .content{
-
-  }
 }
 .alternate .workshop {
-  bakcground-color: white;
+  background-color: white;
 }
