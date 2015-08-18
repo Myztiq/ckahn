@@ -3,9 +3,13 @@
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../node_modules/bootswatch/custom/bootswatch";
 
-//body { padding-top: 63px; }
+body { padding-top: 63px; }
 nav.navbar{
   margin-bottom: 0px;
+}
+
+.green {
+  color: $brand-success;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -189,12 +193,7 @@ section {
     }
   }
 }
-.testimonial-con {
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: space-around;
-  align-items: stretch;
-  blockquote {
+blockquote {
     margin: 15px;
     flex: 300px;
     background-color: #ffffff;
@@ -203,6 +202,12 @@ section {
       border-color: $brand-info;
     }
   }
+.testimonial-con {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  
 }
 .alternate .workshop {
   background-color: white;

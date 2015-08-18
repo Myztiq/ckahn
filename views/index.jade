@@ -9,7 +9,9 @@ block body
       h1= homepage.getText('homepage.catchPhrase')
 
     .caption
-      .container!= homepage.getHtml('homepage.leadImageCaption')
+      .container
+        span &#187; 
+        span!=homepage.getHtml('homepage.leadImageCaption') 
 
   section
     .container
@@ -37,7 +39,10 @@ block body
   section.alternate
     .container
       blockquote
-        p=testimonial.getText('testimonial.quote')
+        p
+          span.start &#147;
+          =testimonial.getText('testimonial.quote')
+          span.end &#148;
         footer
           =testimonial.getText('testimonial.author')
           |,&nbsp;
@@ -99,9 +104,9 @@ block body
         for testimonial in testimonials
           blockquote
             p
-              span.start &#8220;
+              span.start &#147;
               =testimonial.getText('testimonial.quote')
-              span.end &#8221;
+              span.end &#148;
             footer
               =testimonial.getText('testimonial.author')
               |,&nbsp;
