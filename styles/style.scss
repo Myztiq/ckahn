@@ -12,10 +12,30 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: #3D2442;
 }
 
+.glyphicon {
+  padding: 0 10px 0 0;
+}
+
+span {
+  &.start, &.end {
+    color: #E3DEE2;
+    font-size: 36px;
+    line-height: 0;
+    vertical-align: -10px;
+  }
+  &.start {
+    margin: 0 2px 0 -14px;
+  }
+}
+
 section {
   padding-top: 24px;
   padding-bottom: 24px;
   position: relative;
+
+  img {
+    max-width: 100%;
+  }
 
   &.alternate{
     background-color: #F4F5F3;
@@ -150,9 +170,10 @@ section {
   display: flex;
   justify-content: space-around;
   align-items: stretch;
+  margin: 0 -15px;
 }
 .workshop{
-  margin: 8px;
+  margin: 15px;
   flex: 300px;
   background-color: #F4F5F3;
   padding: 24px;
@@ -165,6 +186,21 @@ section {
       font-size: 11px;
       font-weight: normal;
       color: gray;
+    }
+  }
+}
+.testimonial-con {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  blockquote {
+    margin: 15px;
+    flex: 300px;
+    background-color: #ffffff;
+
+    &:hover {
+      border-color: $brand-info;
     }
   }
 }

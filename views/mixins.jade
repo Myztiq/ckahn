@@ -9,9 +9,11 @@ mixin nav(name, id, style)
           span.icon-bar
           span.icon-bar
           span.icon-bar
-        a.navbar-brand(href="#")= name
+        a.navbar-brand(href="#")
+          span(class="glyphicon glyphicon-leaf")
+          =name
       .collapse.navbar-collapse( id=id )
-        ul.nav.navbar-nav
+        ul.nav.navbar-nav.navbar-right
           block
 mixin nav_item(href, active)
   li(class=active): a( href=href )

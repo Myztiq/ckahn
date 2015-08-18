@@ -68,10 +68,10 @@ block body
       .workshops
         each workshop in currentWorkshops
           .workshop
-            .title
+            h4
               =workshop.getText('title')
-                small=workshop.getText('sub')
-            .content
+            small=workshop.getText('sub')
+            p
               !=workshop.getHtml('content')
 
 
@@ -81,10 +81,10 @@ block body
       .workshops
         each workshop in pastWorkshops
           .workshop
-            .title
+            h4
               =workshop.getText('title')
-              small=workshop.getText('sub')
-            .content
+            small=workshop.getText('sub')
+            p
               !=workshop.getHtml('content')
 
   section(id='about')
@@ -95,13 +95,17 @@ block body
   section.alternate(id='testimonials')
     .container
       h2 Testimonials
-      for testimonial in testimonials
-        blockquote
-          p=testimonial.getText('testimonial.quote')
-          footer
-            =testimonial.getText('testimonial.author')
-            |,&nbsp;
-            em=testimonial.getText('testimonial.credentials')
+      .testimonial-con.row
+        for testimonial in testimonials
+          blockquote
+            p
+              span.start &#8220;
+              =testimonial.getText('testimonial.quote')
+              span.end &#8221;
+            footer
+              =testimonial.getText('testimonial.author')
+              |,&nbsp;
+              em=testimonial.getText('testimonial.credentials')
 
 
   section.footer
