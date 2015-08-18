@@ -3,7 +3,7 @@
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../node_modules/bootswatch/custom/bootswatch";
 
-body { padding-top: 63px; }
+body { margin-top: 50px; position: relative; height: 100%; }
 nav.navbar{
   margin-bottom: 0px;
 }
@@ -60,9 +60,6 @@ section {
     padding: 48px 0px;
     font-size: 60px;
     text-align: left;
-    flex: 1;
-  }
-  h1 {
     color: #ffffff;
     text-shadow: 0 5px 5px rgba(0, 0, 0, .5);
   }

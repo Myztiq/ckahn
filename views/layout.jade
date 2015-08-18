@@ -4,15 +4,35 @@ doctype html(lang='en')
 head
   title Carol Kahn
   link(rel="stylesheet", href="/style.css")
-  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+
+  script(src="https://code.jquery.com/jquery-2.1.4.min.js")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
   // Required for Previews and Experiments
   script(src="//static.cdn.prismic.io/prismic.min.js")
 
-body
+  script.
+    $(document).ready(function () {
+      $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        var target = this.hash;
+        var $target = $(target);
+        $('html, body').stop().animate({
+          'scrollTop': $target.offset().top - 45
+        }, 200, 'swing', function () {
+          window.location.hash = target;
+        });
+      });
+    });
+
+body(
+  data-offset = "45"
+  data-spy="scroll"
+  data-target="#main-nav"
+)
   +nav("Carol Kahn", "main-nav")
-    +nav_item( '#groups' )=pages.groups.getText('page.title')
-    +nav_item( '#groups/women' )=pages['groups/women'].getText('page.title')
-    +nav_item( '#groups/co-gender' )=pages['groups/co-gender'].getText('page.title')
-    +nav_item( '#individual' )=pages.individual.getText('page.title')
-    +nav_item( '#about' )=pages.about.getText('page.title')
+    +nav_item( '#groups' ) Groups
+    +nav_item( '#individual' ) Individuals
+    +nav_item( '#current-workshops' ) Workshops
+    +nav_item( '#about' ) About
+
   block body

@@ -2,6 +2,7 @@ extends ./layout.jade
 
 block body
   section.background-image(
+      id="home"
       style = "background-image: url(#{homepage.fragments['homepage.leadImage'].value.main.url})"
     )
     .container.hero
@@ -9,8 +10,8 @@ block body
 
     .caption
       .container
-        span &#187; 
-        span!=homepage.getHtml('homepage.leadImageCaption') 
+        span &#187;
+        span!=homepage.getHtml('homepage.leadImageCaption')
 
   section
     .container
