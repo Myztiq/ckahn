@@ -180,7 +180,7 @@ section {
   margin: 15px;
   flex: 300px;
   background-color: #F4F5F3;
-  padding: 24px;
+  padding: 25px 35px;
   .title{
     font-weight: bold;
     display: block;
@@ -197,7 +197,7 @@ blockquote {
     margin: 15px;
     flex: 300px;
     background-color: #ffffff;
-
+    padding: 25px 35px;
     &:hover {
       border-color: $brand-info;
     }

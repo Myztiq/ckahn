@@ -38,15 +38,16 @@ block body
 
   section.alternate
     .container
-      blockquote
-        p
-          span.start &#147;
-          =testimonial.getText('testimonial.quote')
-          span.end &#148;
-        footer
-          =testimonial.getText('testimonial.author')
-          |,&nbsp;
-          em=testimonial.getText('testimonial.credentials')
+      .row
+        blockquote
+          p
+            span.start &#147;
+            =testimonial.getText('testimonial.quote')
+            span.end &#148;
+          footer
+            =testimonial.getText('testimonial.author')
+            |,&nbsp;
+            em=testimonial.getText('testimonial.credentials')
 
 
   section(id='groups')
