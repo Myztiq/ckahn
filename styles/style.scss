@@ -174,7 +174,7 @@ section {
 .workshop{
   margin: 15px;
   flex: 300px;
-  background-color: #F4F5F3;
+//  background-color: #F4F5F3;
   padding: 25px 35px;
   .title{
     font-weight: bold;
@@ -187,6 +187,9 @@ section {
       color: gray;
     }
   }
+}
+.alternate .workshop {
+//  background-color: white;
 }
 blockquote {
     margin: 15px;
@@ -204,9 +207,7 @@ blockquote {
   align-items: stretch;
   
 }
-.alternate .workshop {
-  background-color: white;
-}
+
 .contact{
   a {
     display: block;
