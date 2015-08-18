@@ -1,5 +1,3 @@
-include mixins
-
 doctype html(lang='en')
 head
   title Carol Kahn
@@ -12,6 +10,20 @@ head
 
   script.
     $(document).ready(function () {
+      $('#contact')
+        .popover({
+          content: $('#contact-form').html(),
+          html: true,
+          placement: 'bottom',
+          viewport: { selector: '#main-nav', padding: 0 }
+        })
+        .on('click', function (evt) {
+          evt.stopPropagation();
+        });
+      $(document).on('click', function () {
+        $('#contact').popover('hide')
+      });
+
       $('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
         var target = this.hash;
@@ -29,10 +41,45 @@ body(
   data-spy="scroll"
   data-target="#main-nav"
 )
-  +nav("Carol Kahn", "main-nav")
-    +nav_item( '#groups' ) Groups
-    +nav_item( '#individual' ) Individuals
-    +nav_item( '#current-workshops' ) Workshops
-    +nav_item( '#about' ) About
+  #contact-form(
+    style="display: none"
+  )
+    .contact
+      a(
+        href = "tel:414-839-2665"
+      )
+        span.glyphicon.glyphicon-earphone
+        | 414-839-2665
+      a(
+        href = "mailto:todo@example.com"
+      )
+        span.glyphicon.glyphicon-envelope
+        | todo@example.com
+
+
+  nav.navbar.navbar-default.navbar-fixed-top.navbar-default(role='navigation')
+    .container
+      .navbar-header
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#main-nav', aria-expanded='false', aria-controls='navbar')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='#home')
+          span.glyphicon.glyphicon-leaf.green
+          | Carol Kahn
+      #main-nav.collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href='#groups') Groups
+          li
+            a(href='#individual') Individuals
+          li
+            a(href='#current-workshops') Workshops
+          li
+            a(href='#about') About
+          li
+            #contact.btn.btn-success Contact
+
 
   block body

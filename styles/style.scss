@@ -6,7 +6,13 @@
 body { margin-top: 50px; position: relative; height: 100%; }
 nav.navbar{
   margin-bottom: 0px;
+  .btn{
+    margin-left: 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+  }
 }
+
 
 .green {
   color: $brand-success;
@@ -48,6 +54,14 @@ section {
   &.footer {
     background-color: $brand-success;
     color: #ffffff;
+    a {
+      display: inline-block;
+      color: #fff;
+      margin-right: 30px;
+    }
+    .copywright{
+      float: right;
+    }
   }
 
   &.background-image{
@@ -189,4 +203,10 @@ blockquote {
 }
 .alternate .workshop {
   background-color: white;
+}
+.contact{
+  a {
+    display: block;
+    white-space: nowrap;
+  }
 }
