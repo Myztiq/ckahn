@@ -49,6 +49,8 @@ section {
 
   &.alternate{
     background-color: #F4F5F3;
+    box-shadow: 1px 4px 9px -6px rgba(0,0,0,.25) inset, 1px -4px 9px -6px rgba(0,0,0,.25) inset;
+    margin-left: -5px;
   }
 
   &.footer {
