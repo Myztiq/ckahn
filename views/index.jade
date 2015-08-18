@@ -16,13 +16,15 @@ block body
       h2= homepage.getText('homepage.secondaryCatchPhrase')
 
       .row.homepage-lists
-        .well
-          .intro You will experience:
+        .panel.panel-success
+          .panel-heading You will experience:
+          .panel-body
             ul
               each val in homepage.fragments['homepage.experienceList'].value
                 li=val.text
-        .well
-          .intro You can:
+        .panel.panel-success
+          .panel-heading You can:
+          .panel-body
             ul
               each val in benefits
                 li.custom-popover
@@ -48,10 +50,10 @@ block body
       !=pages.groups.getHtml('page.content')
 
       .row
-        .col-xs-6(id='groups/co-gender')
+        .col-sm-6(id='groups/co-gender')
           h3=pages['groups/co-gender'].getText('page.title')
           !=pages['groups/co-gender'].getHtml('page.content')
-        .col-xs-6(id='groups/women')
+        .col-sm-6(id='groups/women')
           h3=pages['groups/women'].getText('page.title')
           !=pages['groups/women'].getHtml('page.content')
 
@@ -90,7 +92,7 @@ block body
       h2=pages.about.getText('page.title')
       !=pages.about.getHtml('page.content')
 
-  section(id='testimonials')
+  section.alternate(id='testimonials')
     .container
       h2 Testimonials
       for testimonial in testimonials
