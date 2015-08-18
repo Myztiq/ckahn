@@ -16,13 +16,13 @@ block body
       h2= homepage.getText('homepage.secondaryCatchPhrase')
 
       .row.homepage-lists
-        .panel.panel-success
+        .panel.panel-default
           .panel-heading You will experience:
           .panel-body
             ul
               each val in homepage.fragments['homepage.experienceList'].value
                 li=val.text
-        .panel.panel-success
+        .panel.panel-default
           .panel-heading You can:
           .panel-body
             ul
