@@ -19,7 +19,7 @@ nav.navbar{
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    color: #3D2442;
+  color: #3D2442;
 }
 
 .glyphicon {
@@ -48,7 +48,14 @@ section {
   }
 
   &.alternate{
-    background-color: #F4F5F3;
+    background-image: url(https://prismic-io.s3.amazonaws.com/carolkahn/9e5f67eb46e74448b21ce6e66c714c646a8a3dc0_healing-bridge-with-light.jpg);
+
+    background-size: cover;
+    background-position: center;
+    .content {
+      background-color: white;
+      padding: 25px 35px;
+    }
   }
 
   &.footer {
