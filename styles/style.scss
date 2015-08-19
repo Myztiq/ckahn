@@ -185,28 +185,33 @@ section {
   justify-content: space-around;
   align-items: stretch;
   margin: 0 -15px;
-}
-.workshop{
-  margin: 15px;
-  flex: 300px;
-  background-color: #F4F5F3;
-  padding: 25px 35px;
-  border-radius: 5px;
-  .title{
-    font-weight: bold;
-    display: block;
-    font-size: 16px;
+  .panel {
+    margin: 15px;
+    flex: 300px;
+  }
+  .panel-heading {
     small {
+      margin-top: 5px;
       display: block;
       font-size: 11px;
       font-weight: normal;
-      color: gray;
+      color: white;
     }
   }
 }
-.alternate .workshop {
-  background-color: white;
+
+.panel-purple{
+  border: transparent;
+  border-bottom: 1px solid #3D2442;
+  box-shadow: none;
+  border-radius: 5px 5px 0 0;
+
+  & > .panel-heading{
+    background-color: #3D2442;
+    color: white;
+  }
 }
+
 blockquote {
     margin: 15px;
     flex: 300px;

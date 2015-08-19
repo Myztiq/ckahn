@@ -20,13 +20,13 @@ block body
       h2= homepage.getText('homepage.secondaryCatchPhrase')
 
       .row.homepage-lists
-        .panel.panel-default
+        .panel.panel-purple
           .panel-heading You will experience:
           .panel-body
             ul
               each val in homepage.fragments['homepage.experienceList'].value
                 li=val.text
-        .panel.panel-default
+        .panel.panel-purple
           .panel-heading You can:
           .panel-body
             ul
@@ -75,12 +75,12 @@ block body
       h2 Workshops
       .workshops
         each workshop in currentWorkshops
-          .workshop
-            h4
+          .panel.panel-purple
+            .panel-heading
               =workshop.getText('title')
-            small=workshop.getText('sub')
-            p
-              !=workshop.getHtml('content')
+              small=workshop.getText('sub')
+            .panel-body
+              p!=workshop.getHtml('content')
 
 
   section.alternate.image-bg(id='past-workshops')
@@ -88,12 +88,12 @@ block body
       h2 Workshop History
       .workshops
         each workshop in pastWorkshops
-          .workshop
-            h4
+          .panel.panel-purple
+            .panel-heading
               =workshop.getText('title')
-            small=workshop.getText('sub')
-            p
-              !=workshop.getHtml('content')
+              small=workshop.getText('sub')
+            .panel-body
+              p!=workshop.getHtml('content')
 
   section(id='about')
     .container
