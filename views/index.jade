@@ -51,52 +51,9 @@ block body
             |,&nbsp;
             em=testimonial.getText('testimonial.credentials')
 
-
-  section(id='groups')
-    .container
-      h2=pages.groups.getText('page.title')
-      !=pages.groups.getHtml('page.content')
-
-      .row
-        .col-sm-6(id='groups/co-gender')
-          h3=pages['groups/co-gender'].getText('page.title')
-          !=pages['groups/co-gender'].getHtml('page.content')
-        .col-sm-6(id='groups/women')
-          h3=pages['groups/women'].getText('page.title')
-          !=pages['groups/women'].getHtml('page.content')
-
-  section.alternate(id='individual')
-    .container
-      h2=pages.individual.getText('page.title')
-      !=pages.individual.getHtml('page.content')
-
-  section(id='current-workshops')
-    .container
-      h2 Workshops
-      .workshops
-        each workshop in currentWorkshops
-          .panel.panel-purple
-            .panel-heading
-              =workshop.getText('title')
-              small=workshop.getText('sub')
-            .panel-body
-              p!=workshop.getHtml('content')
-
-
-  section.alternate.image-bg(id='past-workshops')
-    .container
-      h2 Workshop History
-      .workshops
-        each workshop in pastWorkshops
-          .panel.panel-purple
-            .panel-heading
-              =workshop.getText('title')
-              small=workshop.getText('sub')
-            .panel-body
-              p!=workshop.getHtml('content')
-
   section(id='about')
     .container
+      img.headshot.img-responsive(src=pages.about.fragments['page.leadPhoto'].value.main.url)
       h2=pages.about.getText('page.title')
       !=pages.about.getHtml('page.content')
 
@@ -114,3 +71,50 @@ block body
               =testimonial.getText('testimonial.author')
               |,&nbsp;
               em=testimonial.getText('testimonial.credentials')
+
+  section(id='individual')
+    .container
+      h2=pages.individual.getText('page.title')
+      !=pages.individual.getHtml('page.content')
+
+
+  section.alternate(id='groups')
+    .container
+      h2=pages.groups.getText('page.title')
+      !=pages.groups.getHtml('page.content')
+
+      .row
+        .col-sm-6(id='groups/co-gender')
+          h3=pages['groups/co-gender'].getText('page.title')
+          !=pages['groups/co-gender'].getHtml('page.content')
+        .col-sm-6(id='groups/women')
+          h3=pages['groups/women'].getText('page.title')
+          !=pages['groups/women'].getHtml('page.content')
+
+  section(id='current-workshops')
+    .container
+      h2 Workshops
+      .workshops
+        each workshop in currentWorkshops.workshops
+          .panel.panel-purple
+            .panel-heading
+              =workshop.getText('title')
+              small=workshop.getText('sub')
+            .panel-body
+              p!=workshop.getHtml('content')
+
+
+  section.image-bg(
+    id='past-workshops'
+    style = "background-image: url(#{pastWorkshops.coverPhoto})"
+  )
+    .container
+      h2 Workshop History
+      .workshops
+        each workshop in pastWorkshops.workshops
+          .panel.panel-purple
+            .panel-heading
+              =workshop.getText('title')
+              small=workshop.getText('sub')
+            .panel-body
+              p!=workshop.getHtml('content')
