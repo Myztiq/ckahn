@@ -14,7 +14,7 @@ head
 
   script.
     $(document).ready(function () {
-      $('#contact')
+      $('#contact-button')
         .popover({
           content: $('#contact-form').html(),
           html: true,
@@ -25,7 +25,7 @@ head
           evt.stopPropagation();
         });
       $(document).on('click', function () {
-        $('#contact').popover('hide')
+        $('#contact-button').popover('hide')
       });
 
       $('a[href^="#"]').on('click', function (e) {
@@ -83,8 +83,8 @@ body(
           li
             a(href='#current-workshops') Workshops
           li
-            #contact.btn.btn-success.btn-sm(style="margin-top: 15px;") Contact
-
+            a.visible-xs-block(href='#contact') Contact
+            #contact-button.visible-sm-block.visible-md-block.visible-lg-block.btn.btn-success.btn-sm(style="margin-top: 10px;") Contact
 
   block body
 

@@ -21,7 +21,16 @@ nav.navbar{
   .container {
     > h1, > h2, > h3, > h4, > h5, > h6 {
       color: #ffffff;
-      text-shadow: 0 2px 3px rgba(0, 0, 0, .5);
+      text-shadow: 0 2px 3px rgba(61, 36, 66, .5);
+    }
+  }
+}
+
+#past-workshops {
+  .container {
+    > h2 {
+      color: #3D2442;
+      text-shadow: 0 2px 3px rgba(255, 255, 255, .5);
     }
   }
 }
