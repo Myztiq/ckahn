@@ -190,12 +190,13 @@ section {
     flex: 300px;
   }
   .panel-heading {
+    font-size: 14px;
+    font-weight: bold;
     small {
       margin-top: 5px;
       display: block;
       font-size: 11px;
       font-weight: normal;
-      color: white;
     }
   }
 }
@@ -204,11 +205,15 @@ section {
   border: transparent;
   border-bottom: 1px solid #3D2442;
   box-shadow: none;
-  border-radius: 5px 5px 0 0;
+  border-radius: 0;
 
   & > .panel-heading{
-    background-color: #3D2442;
-    color: white;
+    border-radius: 0;
+    border-top: 5px solid #3D2442;
+    padding-bottom: 0px;
+  }
+  & > .panel-body {
+    padding-top: 0px;
   }
 }
 
