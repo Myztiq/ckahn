@@ -14,6 +14,21 @@ nav.navbar{
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
+.image-bg {
+  background-image: url(https://c1.staticflickr.com/1/424/18578497398_4e2d69fd94_k.jpg);
+  background-size: cover;
+  background-position: center;
+  .container {
+    > h1, > h2, > h3, > h4, > h5, > h6 {
+      color: #ffffff;
+      text-shadow: 0 2px 3px rgba(0, 0, 0, .5);
+    }
+  }
+}
+
+.sun {
+  background-image: url(https://c1.staticflickr.com/7/6097/6348153359_a2b90b913d_b.jpg);
+}
 
 .green {
   color: $brand-success;
@@ -74,8 +89,8 @@ section {
 }
 .hero{
   h1{
-    padding: 48px 0px;
-    font-size: 60px;
+    padding: 200px 0px 0px;
+    font-size: 48px;
     text-align: left;
     color: #ffffff;
     text-shadow: 0 5px 5px rgba(0, 0, 0, .5);
@@ -197,6 +212,7 @@ blockquote {
     flex: 300px;
     background-color: #ffffff;
     padding: 25px 35px;
+    border-radius: 5px;
     &:hover {
       border-color: $brand-info;
     }

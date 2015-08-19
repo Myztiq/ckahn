@@ -6,12 +6,14 @@ block body
       style = "background-image: url(#{homepage.fragments['homepage.leadImage'].value.main.url})"
     )
     .container.hero
-      h1= homepage.getText('homepage.catchPhrase')
+      .row
+        .col.col-sm-6
+          h1= homepage.getText('homepage.catchPhrase')
 
-    .caption
-      .container
-        span &#187;
-        span!=homepage.getHtml('homepage.leadImageCaption')
+    //- .caption
+    //-   .container
+    //-     span &#187;
+    //-     span!=homepage.getHtml('homepage.leadImageCaption')
 
   section
     .container
@@ -36,7 +38,7 @@ block body
                     each detail in val.details.value
                       li=detail.text
 
-  section.alternate
+  section.alternate.image-bg
     .container
       .row
         blockquote
@@ -81,7 +83,7 @@ block body
               !=workshop.getHtml('content')
 
 
-  section.alternate(id='past-workshops')
+  section.alternate.image-bg(id='past-workshops')
     .container
       h2 Workshop History
       .workshops
@@ -98,7 +100,7 @@ block body
       h2=pages.about.getText('page.title')
       !=pages.about.getHtml('page.content')
 
-  section.alternate(id='testimonials')
+  section.alternate.image-bg.sun(id='testimonials')
     .container
       h2 Testimonials
       .testimonial-con.row
