@@ -240,13 +240,14 @@ blockquote {
     opacity: 0;
     top: 0px;
     transition: opacity 1s, left 1s, transform 1s;
+    transition-timing-function: ease-in-out;
     z-index: 1;
     width: 100%;
     pointer-events: none;
-    transform: scale(1.1);
+    transform: scale(.9);
     left: -50px;
     &.active{
-      transition-delay: .5s;
+      transition-delay: .7s;
       left: 0px;
       pointer-events: auto;
       opacity: 1;
