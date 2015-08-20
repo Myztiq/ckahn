@@ -38,6 +38,21 @@ head
           window.location.hash = target;
         });
       });
+
+
+      setInterval(function () {
+        var $current = $('.testimonial-con blockquote.active');
+        var $next = $current.next('blockquote:not(.spacer)');
+        if ($next.length) {
+          $next.addClass('active');
+        } else {
+          $('.testimonial-con blockquote:first-of-type').addClass('active');
+        }
+        $current.removeClass('active');
+        $('.testimonial-con blockquote.out').removeClass('out');
+        $current.addClass('out');
+      }, 10000)
+
     });
 
 body(

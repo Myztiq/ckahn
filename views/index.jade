@@ -61,16 +61,26 @@ block body
     .container
       h2 Testimonials
       .testimonial-con.row
-        for testimonial in testimonials
-          blockquote
+        for testimonial, index in testimonials
+          blockquote(
+            class=index===0 ? 'active' : ''
+          )
             p
               span.start &#147;
               =testimonial.getText('testimonial.quote')
               span.end &#148;
             footer
               =testimonial.getText('testimonial.author')
-              |,&nbsp;
-              em=testimonial.getText('testimonial.credentials')
+              if testimonial.getText('testimonial.credentials')
+                |,&nbsp;
+                em=testimonial.getText('testimonial.credentials')
+
+        blockquote.spacer
+          p
+            span.start &#147;
+            | Carol is committed to doing her own deep work, which makes it safer for me to do mine. She respects and stays present with my “stealthy strategies” to avoid vulnerability while I gain insight into my unconscious defenses. I appreciate her direct and honest approach.
+            span.end &#148;
+          footer Deb Hoffmann, Zen Priest, Ayurvedic Practitioner, Yoga Instructor
 
   section(id='individual')
     .container

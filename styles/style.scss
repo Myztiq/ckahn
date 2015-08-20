@@ -234,10 +234,32 @@ blockquote {
     }
   }
 .testimonial-con {
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: space-around;
-  align-items: stretch;
+  position: relative;
+  blockquote{
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    transition: opacity 1s, left 1s, transform 1s;
+    z-index: 1;
+    width: 100%;
+    pointer-events: none;
+    transform: scale(1.1);
+    left: -50px;
+    &.active{
+      transition-delay: .5s;
+      left: 0px;
+      pointer-events: auto;
+      opacity: 1;
+      transform: scale(1);
+    }
+    &.out{
+      left: 50px;
+      transform: scale(.9);
+    }
+  }
+  blockquote.spacer{
+    position: relative;
+  }
   
 }
 
@@ -254,5 +276,5 @@ blockquote {
   border-radius: 5px;
   box-shadow: 0 0 2px rgba(0,0,0,.25);
   margin: 35px 0 20px 20px;
-  max-width: 300px;
+  max-width: 200px;
 }
