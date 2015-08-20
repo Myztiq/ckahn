@@ -101,7 +101,10 @@ block body
           h3=pages['groups/women'].getText('page.title')
           !=pages['groups/women'].getHtml('page.content')
 
-  section(id='current-workshops')
+  section.image-bg(
+    id='current-workshops'
+    style = "background-image: url(#{pastWorkshops.coverPhoto})"
+  )
     .container
       h2 Workshops
       .workshops
@@ -113,18 +116,17 @@ block body
             .panel-body
               p!=workshop.getHtml('content')
 
-
-  section.image-bg(
-    id='past-workshops'
-    style = "background-image: url(#{pastWorkshops.coverPhoto})"
-  )
+  section
     .container
-      h2 Workshop History
-      .workshops
-        each workshop in pastWorkshops.workshops
-          .panel.panel-purple
-            .panel-heading
-              =workshop.getText('title')
-              small=workshop.getText('sub')
-            .panel-body
-              p!=workshop.getHtml('content')
+      h2.more-info.inactive
+        span.glyphicon.glyphicon-triangle-bottom
+        span.content Workshop History
+      .toggled
+        .workshops
+          each workshop in pastWorkshops.workshops
+            .panel.panel-purple
+              .panel-heading
+                =workshop.getText('title')
+                small=workshop.getText('sub')
+              .panel-body
+                p!=workshop.getHtml('content')

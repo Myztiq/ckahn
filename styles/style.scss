@@ -277,5 +277,38 @@ blockquote {
   border-radius: 5px;
   box-shadow: 0 0 2px rgba(0,0,0,.25);
   margin: 35px 0 20px 20px;
-  max-width: 200px;
+  max-width: 300px;
+}
+
+h2.more-info{
+  transition: font-size .5s;
+  cursor: pointer;
+  .content{
+    margin-left: 10px;
+    transition: margin .5s;
+  }
+  .glyphicon{
+    padding: 0px;
+    transform-origin: 50% 50%;
+    transition: transform .5s;
+    transform: rotate(0deg);
+  }
+  &.inactive{
+    .content{
+      margin-left: 2px;
+    }
+    .glyphicon{
+      transform: rotate(-90deg);
+    }
+    font-size: 16px;
+
+  }
+}
+.toggled{
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .5s;
+  &.active{
+    max-height: 2000px;
+  }
 }

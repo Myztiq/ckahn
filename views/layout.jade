@@ -52,7 +52,12 @@ head
         $current.removeClass('active');
         $('.testimonial-con blockquote.out').removeClass('out');
         $current.addClass('out');
-      }, 10000)
+      }, 10000);
+
+      $('.more-info').click(function(evt){
+        $(evt.currentTarget).next('.toggled').toggleClass('active');
+        $(evt.currentTarget).toggleClass('inactive')
+      });
 
     });
 
