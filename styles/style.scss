@@ -224,15 +224,15 @@ section {
 }
 
 blockquote {
-    margin: 15px;
-    flex: 300px;
-    background-color: rgba(255,255,255,.9);
-    padding: 25px 35px;
-    border-radius: 5px;
-    &:hover {
-      border-color: $brand-info;
-    }
+  margin: 15px;
+  flex: 300px;
+  background-color: rgba(255,255,255,.9);
+  padding: 25px 35px;
+  border-radius: 5px;
+  &:hover {
+    border-color: $brand-info;
   }
+}
 .testimonial-con {
   position: relative;
   blockquote{
