@@ -1,7 +1,11 @@
+$purple: #69466e;
+$brand-success: $purple;
+$font-size-base: 14px;
 //@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "../node_modules/bootswatch/custom/variables";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../node_modules/bootswatch/custom/bootswatch";
+
 
 body { margin-top: 50px; position: relative; height: 100%; }
 nav.navbar{
@@ -15,7 +19,7 @@ nav.navbar{
 }
 
 .image-bg {
-  background-image: url(https://c1.staticflickr.com/1/424/18578497398_4e2d69fd94_k.jpg);
+  background-image: url(http://c1.staticflickr.com/9/8806/16696742654_8661294a01_h.jpg);
   background-size: cover;
   background-position: center;
   .container {
@@ -28,10 +32,16 @@ nav.navbar{
       border-radius: 5px;
     }
   }
+  .panel-purple{
+    border-radius: 5px;
+    .panel-heading{
+      border-radius: 5px;
+    }
+  }
 }
 
 .sun {
-  background-image: url(https://c1.staticflickr.com/7/6097/6348153359_a2b90b913d_b.jpg);
+  background-image: url(http://c2.staticflickr.com/4/3030/3031789871_1bb06b9aae_b.jpg);
 }
 
 .green {
@@ -39,7 +49,7 @@ nav.navbar{
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    color: #3D2442;
+    color: $purple;
 }
 
 .glyphicon {
@@ -91,10 +101,13 @@ section {
     background-position: center;
   }
 }
+.hero-section{
+  border-bottom: 4px solid $purple;
+}
 .hero{
   h1{
     padding: 200px 0px 0px;
-    font-size: 48px;
+    font-size: 40px;
     text-align: left;
     color: #ffffff;
     text-shadow: 0 5px 5px rgba(0, 0, 0, .5);
@@ -183,6 +196,18 @@ section {
   }
 }
 
+.panel-heading {
+  font-size: 16px;
+  font-weight: bold;
+  color: $purple;
+  small {
+    margin-top: 5px;
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+  }
+}
+
 .workshops{
   flex-wrap: wrap;
   display: flex;
@@ -193,29 +218,17 @@ section {
     margin: 15px;
     flex: 300px;
   }
-  .panel-heading {
-    font-size: 14px;
-    font-weight: bold;
-    small {
-      margin-top: 5px;
-      display: block;
-      font-size: 11px;
-      font-weight: normal;
-    }
-  }
 }
 
 .panel-purple{
   border: transparent;
-  border-bottom: 1px solid #3D2442;
+  border-bottom: 1px solid $purple;
   box-shadow: none;
   border-radius: 0;
   background-color: rgba(255,255,255,.9);
-
-
   & > .panel-heading{
-    border-radius: 0;
-    border-top: 5px solid #3D2442;
+    border-radius: 0px;
+    border-top: 1px solid $purple;
     padding-bottom: 0px;
   }
   & > .panel-body {
@@ -230,7 +243,7 @@ blockquote {
   padding: 25px 35px;
   border-radius: 5px;
   &:hover {
-    border-color: $brand-info;
+    border-color: #5cb85c;
   }
 }
 .testimonial-con {
