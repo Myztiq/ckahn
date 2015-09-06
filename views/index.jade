@@ -3,7 +3,7 @@ extends ./layout.jade
 block body
   section.background-image.hero-section(
       id="home"
-      style = "background-image: url(#{homepage.fragments['homepage.leadImage'].value.main.url})"
+      style = "background-image: url(#{backgrounds[0].fragments.coverPhoto.value.main.url})"
     )
     .container.hero
       .row
@@ -38,7 +38,9 @@ block body
                     each detail in val.details.value
                       li=detail.text
 
-  section.alternate.image-bg
+  section.alternate.image-bg(
+    style = "background-image: url(#{backgrounds[1].fragments.coverPhoto.value.main.url})"
+  )
     .container
       .row
         blockquote
@@ -55,9 +57,12 @@ block body
     .container
       img.headshot.img-responsive(src=pages.about.fragments['page.leadPhoto'].value.main.url)
       h2=pages.about.getText('page.title')
-      !=pages.about.getHtml('page.content')
+      !=pages.about.getHtml('page.content', linkResolver)
 
-  section.alternate.image-bg.sun(id='testimonials')
+  section.alternate.image-bg.sun(
+    id='testimonials'
+    style = "background-image: url(#{backgrounds[2].fragments.coverPhoto.value.main.url})"
+  )
     .container
       h2 Testimonials
       .testimonial-con.row
@@ -85,25 +90,25 @@ block body
   section(id='individual')
     .container
       h2=pages.individual.getText('page.title')
-      !=pages.individual.getHtml('page.content')
+      !=pages.individual.getHtml('page.content', linkResolver)
 
 
   section.alternate(id='groups')
     .container
       h2=pages.groups.getText('page.title')
-      !=pages.groups.getHtml('page.content')
+      !=pages.groups.getHtml('page.content', linkResolver)
 
       .row
         .col-sm-6(id='groups/co-gender')
           h3=pages['groups/co-gender'].getText('page.title')
-          !=pages['groups/co-gender'].getHtml('page.content')
+          !=pages['groups/co-gender'].getHtml('page.content', linkResolver)
         .col-sm-6(id='groups/women')
           h3=pages['groups/women'].getText('page.title')
-          !=pages['groups/women'].getHtml('page.content')
+          !=pages['groups/women'].getHtml('page.content', linkResolver)
 
   section.image-bg(
     id='current-workshops'
-    style = "background-image: url(#{pastWorkshops.coverPhoto})"
+    style = "background-image: url(#{backgrounds[3].fragments.coverPhoto.value.main.url})"
   )
     .container
       h2 Workshops
@@ -114,7 +119,7 @@ block body
               =workshop.getText('title')
               small=workshop.getText('sub')
             .panel-body
-              p!=workshop.getHtml('content')
+              p!=workshop.getHtml('content', linkResolver)
 
   section
     .container
@@ -129,4 +134,4 @@ block body
                 =workshop.getText('title')
                 small=workshop.getText('sub')
               .panel-body
-                p!=workshop.getHtml('content')
+                p!=workshop.getHtml('content', linkResolver)
