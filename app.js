@@ -12,6 +12,7 @@ var session = require('express-session');
 var errorHandler = require('errorhandler');
 var routes = require('./lib/routes');
 var path = require('path');
+var autoprefixer = require('express-autoprefixer');
 var sassMiddleware = require('node-sass-middleware');
 
 var app = express();
@@ -30,6 +31,9 @@ app.use(sassMiddleware({
   src: path.join(__dirname, 'styles'),
   dest: path.join(__dirname, 'public')
 }));
+
+app.use(autoprefixer({ browsers: 'last 2 versions', cascade: false }));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(errorHandler());
