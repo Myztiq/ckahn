@@ -10,7 +10,7 @@
     "bluebird": "^2.9.34",
     "body-parser": "~1.0.0",
     "bootstrap-sass": "^3.3.5",
-    "bootswatch": "^3.3.5",
+    "bootswatch": "3.3.5",
     "cookie-parser": "~1.3.4",
     "debug": "~0.7.4",
     "errorhandler": "~1.1.1",

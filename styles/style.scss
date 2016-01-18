@@ -26,6 +26,19 @@ nav.navbar{
     font-style: italic;
     font-size: 12px;
   }
+  .navbar-brand{
+    position: relative;
+    margin-left: 20px !important;
+    img {
+      top: 22px;
+      height: 30px;
+      left: -20px;
+      position: absolute;
+    }
+  }
+  .more-info{
+    margin-left: 8px;
+  }
 }
 
 .image-bg {
